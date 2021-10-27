@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    user-select: none;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    background-color: rgb(215, 218, 221);
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+    width: 300px;
+    padding: 25px;
+    border: 1px solid rgba(0, 0, 0, 0.548);
+    border-radius: 10px;
+    background-color: rgba(78, 78, 78, 0.452);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.555);
+}
+
+.container-btn {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 10px;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.btn-op {
+    background-color: rgb(255, 222, 131);
+    width: 55px;
+    height: 100%px;
+    font-size: 25px;
+    user-select: none;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+/* .btn-op:hover {
+    background-color:  rgb(230, 195, 99);
+} */
+
+.btn-number {
+    background-color: rgb(224, 224, 224);
+    font-size: 25px;
+    user-select: none;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+/* .btn-number:hover{
+    background-color: rgb(196, 196, 196);
+} */
+
+.equal {
+    grid-column: 3/5; 
+    grid-row: 5/6 ;
+    width: auto;
+} 
+
+.screen {
+    border: 1px solid black;
+    width: 100%;
+    text-align: right;
+    height: 40px;
+    font-size: 25px;
+    border-radius: 5px;
+    background-color: slategrey;
+    
+}
+
+.screen-result {
+    color:rgb(143, 238, 179);
+}
+
+.user-info {
+    /* position: relative; */
+    /* border: 1px solid rgb(155, 154, 154); */
+    max-width: 300px;
+    border-radius: 6px;
+    margin: 10px auto;
+    text-align: center;
+    padding: 10px 20px;
+    color: rgb(45, 76, 107);
+    font-size: 1rem;
+    box-shadow: 2px 2px 5px 5px rgb(180, 180, 180);
+}
+
+.hide {
+    display: none;
+}
+
+.dot-block{
+    pointer-events: none;
+}
+
+.title {
+    /* position: relative; */
+    top:150px;
+    max-width: 300px;
+    border-radius: 6px;
+    margin: 15px auto;
+    text-align: center;
+    padding: 15px 20px;
+    color: rgb(45, 76, 107);
+    font-size: 1rem;
+    box-shadow: 2px 2px 5px 5px rgb(180, 180, 180);
+}
+
+@media screen and (min-width: 1200px){
+
+    .btn-number:hover{
+        background-color: rgb(196, 196, 196);
+    }
+
+
+    .btn-op:hover {
+    background-color:  rgb(230, 195, 99);
+    }
+
+}
