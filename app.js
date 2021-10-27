@@ -152,7 +152,6 @@ const reset = () => {
 }
 
 
-
 const getValue = (value) => {
     if (value.length > 14) {
         alertUser('You can´t enter more than 14 digits!');
@@ -167,7 +166,7 @@ const getValue = (value) => {
     }
 }
 
-
+// Cheks if the entry has more than one point
 const verificarDecimal = (value) => {
 
     const nroComas = Array.from(value).reduce((acc, curr) => {
@@ -179,6 +178,8 @@ const verificarDecimal = (value) => {
     return nroComas;
 }
 
+
+// The operations below has these arrangements to avoid problems with the values to show on "screen".
 const percentage = (v1, v2) => {
     const perResult = v1 * v2/100;
     
@@ -241,7 +242,7 @@ const power = (v1, v2) => {
     return Number(pwrResult.toFixed(3));
 }
 
-
-alertUser('Thanks for use it! 😎');
+// About me!
+alertUser('Thanks for use it!!! 😎');
 console.log("Luis Augsburger - Web developer");
 console.log("https://twitter.com/augsburger_luis");
