@@ -238,8 +238,12 @@ const power = (v1, v2) => {
 
     const pwrResult = v1 ** v2;
 
-    alertUser('The result has been rounded to 3 digits😅');
-    return Number(pwrResult.toFixed(3));
+    if (Number.isInteger(pwrResult)) {
+        return pwrResult;
+    } else {
+        alertUser('The result has been rounded to 3 digits😅');
+        return Number(pwrResult.toFixed(3));
+    }
 }
 
 // About me!
