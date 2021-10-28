@@ -87,12 +87,12 @@ const calculate = (num1, num2, oper) => {
         }
         if (oper == '/') {
             if (!v1 && !v2) {
-                alertUser('Indeterminate');
+                alertUser('Indeterminate 😶');
                 reset();
                 updateUI("");
                 return;
             } else if (!v2) {
-                alertUser('Infinity');
+                alertUser('Infinity 😵');
                 reset();
                 updateUI("");
                 return;
@@ -233,17 +233,21 @@ const multiply = (v1, v2) => {
     }
 }
 
-
 const power = (v1, v2) => {
 
     const pwrResult = v1 ** v2;
 
-    if (Number.isInteger(pwrResult)) {
-        return pwrResult;
+    if (Number.isFinite(pwrResult)) {
+        if (Number.isInteger(pwrResult)) {
+            return pwrResult;
+        } else {
+            alertUser('The result has been rounded to 3 digits😅');
+            return Number(pwrResult.toFixed(3));
+        }
     } else {
-        alertUser('The result has been rounded to 3 digits😅');
-        return Number(pwrResult.toFixed(3));
+        return pwrResult;
     }
+
 }
 
 // About me!
