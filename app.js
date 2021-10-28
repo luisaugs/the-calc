@@ -110,7 +110,6 @@ const calculate = (num1, num2, oper) => {
         updateUI("");
         return;
     }
-
 }
 
 const showResult = (value) => {
@@ -247,7 +246,6 @@ const power = (v1, v2) => {
     } else {
         return pwrResult;
     }
-
 }
 
 // About me!
